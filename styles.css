@@ -8,3 +8,12 @@ red - #ee5253
 
 */
 
+body {
+  background-image: url('https://i.pinimg.com/736x/48/33/a1/4833a159996e2d0e982dfa3d6fbf7c0a.jpg');
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: teal;
+  display: flex;
+}
