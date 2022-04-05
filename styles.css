@@ -17,3 +17,8 @@ header {
   background-color: teal;
   display: flex;
 }
+
+header > h1 {
+  margin-inline-start: 10px;
+  font-size: larger;
+}
