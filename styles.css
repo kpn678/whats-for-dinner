@@ -22,3 +22,22 @@ header > h1 {
   margin-inline-start: 10px;
   font-size: larger;
 }
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px;
+}
+
+.buttons-form {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 150px;
+}
+
+.image-and-message {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 150px;
+  width: 120px;
+  
+}
