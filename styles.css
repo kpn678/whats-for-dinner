@@ -46,11 +46,11 @@ main {
 .buttons-form {
   background-color: rgba(225, 225, 225, .9);
   padding: 50px;
-  width: 300px;
-  height: 350px;
+  width: 350px;
+  height: 300px;
 }
 
-input[type="radio"]{
+input[type="radio"] {
   margin: 0 10px 20px 10px;
 }
 
@@ -62,12 +62,29 @@ input[type="radio"]{
   width: 150px;
 }
 
-.image-and-message {
+.stockpot-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(225, 225, 225, .9);
-  padding: 153px;
-  width: 120px;
+  padding: 50px;
+  width: 350px;
+  height: 300px;
 }
 
+.stockpot-img {
+  width: 150px;
+}
+
+h3 {
+  font-style: italic;
+  text-align: center;
+}
+
+p {
+  font-size: xx-large;
+  text-align: center;
+}
 .hidden {
   display: none!important;
 }
