@@ -9,47 +9,33 @@ var dessertDishes = ["Apple Pie", "Lemon Meringue Pie", "Black Forest Cake", "Ba
 "Pumpkin Pie", "Key Lime Pie", "Tart Tatin", "Croissants", "Eclairs"];
 
 //page elements
-var stockPot = document.querySelector("svg");
-var dishSuggestion = document.querySelector(".dish-suggestion");
+var stockPot = document.querySelector(".stockpot-img");
+var dishSuggestion = document.querySelector(".dish-suggestion")
+var dishSuggestionText = document.querySelector("p");
 
-//buttons
-var sideButton = document.querySelector("#side");
-var mainDishButton = document.querySelector("#main-dish");
-var dessertButton = document.querySelector("#dessert");
+//query selectors
+var sideSelection = document.querySelector('input[value="side"]');
+var mainSelection = document.querySelector('input[value="main"]');
+var dessertSelection = document.querySelector('input[value="dessert"]');
 var letsCookButton = document.querySelector(".lets-cook");
 
-//eventListeners
-sideButton.addEventListener('click', )
-mainDishButton.addEventListener('click', )
-dessertButton.addEventListener('click', )
+//event listeners
 letsCookButton.addEventListener('click', randomizeDish)
 
-//functions and eventHandlers
+//functions and event handlers
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
 function randomizeDish() {
-  if (value === "side") {
-    return sideDishes[getRandomIndex(sideDishes)];
-  } else if (value === "main") {
-    return mainDishes[getRandomIndex(mainDishes)];
-  } else if (value === "dessert") {
-    return dessertDishes[getRandomIndex(dessertDishes)];
-  }
-  changePotToSuggestion();
-};
-
-function changePotToSuggestion() {
   stockPot.classList.add("hidden");
   dishSuggestion.classList.remove("hidden");
-  dishSuggestion.innerHTML = `<h3>You should make:</h3>
-      <p>???</p>`
-
+  event.preventDefault();
+  if (sideSelection.checked) {
+    dishSuggestionText.innerText = sideDishes[getRandomIndex(sideDishes)]
+  } else if (mainSelection.checked) {
+    dishSuggestionText.innerText = mainDishes[getRandomIndex(mainDishes)]
+  } else if (dessertSelection.checked) {
+    dishSuggestionText.innerText = dessertDishes[getRandomIndex(dessertDishes)]
+  }
 };
-
-/* Need to do:
-- Make p css
-- Figure out how to link value of radio buttons to eventListeners to get what we need
-- Where to put p changing in JS
-*/
