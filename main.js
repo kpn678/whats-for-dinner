@@ -10,6 +10,7 @@ var dessertDishes = ["Apple Pie", "Lemon Meringue Pie", "Black Forest Cake", "Ba
 
 //page elements
 var stockPot = document.querySelector("svg");
+var dishSuggestion = document.querySelector(".dish-suggestion");
 
 //buttons
 var sideButton = document.querySelector("#side");
@@ -36,11 +37,19 @@ function randomizeDish() {
   } else if (value === "dessert") {
     return dessertDishes[getRandomIndex(dessertDishes)];
   }
+  changePotToSuggestion();
+};
+
+function changePotToSuggestion() {
+  stockPot.classList.add("hidden");
+  dishSuggestion.classList.remove("hidden");
+  dishSuggestion.innerHTML = `<h3>You should make:</h3>
+      <p>???</p>`
 
 };
 
-/* 1) Must be able to click button for correct type of dish
-2) Value that results from that will be held while "lets cook" button is pressed
-3) Once "lets cook" is pressed, crockpot will disappear, and text will generate with food.
-
-    */
+/* Need to do:
+- Make p css
+- Figure out how to link value of radio buttons to eventListeners to get what we need
+- Where to put p changing in JS
+*/
