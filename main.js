@@ -20,14 +20,14 @@ var dessertSelection = document.querySelector('input[value="dessert"]');
 var letsCookButton = document.querySelector(".lets-cook");
 
 //event listeners
-letsCookButton.addEventListener('click', randomizeDish)
+letsCookButton.addEventListener('click', showRandomizedDish)
 
 //functions and event handlers
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function randomizeDish() {
+function showRandomizedDish() {
   stockPot.classList.add("hidden");
   dishSuggestion.classList.remove("hidden");
   event.preventDefault();
