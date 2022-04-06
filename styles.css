@@ -16,6 +16,7 @@ body {
 header {
   background-color: teal;
   display: flex;
+  justify-content: space-between;
 }
 
 header > h1 {
@@ -32,12 +33,23 @@ main {
 
 .buttons-form {
   background-color: rgba(225, 225, 225, .9);
-  padding: 150px;
+  padding: 125px;
+}
+
+input[type="radio"]{
+  margin: 0 10px 20px 10px;
+}
+
+#lets-cook {
+  background-color: #0fb9b1;
+  border-style: hidden;
+  border-radius: 10px;
+  height: 30px;
+  width: 150px;
 }
 
 .image-and-message {
   background-color: rgba(225, 225, 225, .9);
-  padding: 150px;
+  padding: 153px;
   width: 120px;
-  
 }
