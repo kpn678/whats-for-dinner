@@ -8,24 +8,50 @@ var dessertDishes = ["Apple Pie", "Lemon Meringue Pie", "Black Forest Cake", "Ba
 "Cheesecake", "Funfetti Cake", "Baklava", "Flan", "Macarons", "Macaroons", "Chocolate Cupcakes", "Pavlova",
 "Pumpkin Pie", "Key Lime Pie", "Tart Tatin", "Croissants", "Eclairs"];
 
-//page elements
+//page elements query selectors
 var stockPot = document.querySelector(".stockpot-img");
 var dishSuggestion = document.querySelector(".dish-suggestion")
 var dishSuggestionText = document.querySelector("p");
+var addNewRecipeForm = document.querySelector(".add-new-recipes");
 
-//query selectors
+//input & button query selectors
 var sideSelection = document.querySelector('input[value="side"]');
 var mainSelection = document.querySelector('input[value="main"]');
 var dessertSelection = document.querySelector('input[value="dessert"]');
 var entireSelection = document.querySelector('input[value="entire"]');
-var letsCookButton = document.querySelector(".lets-cook");
+var letsCookButton = document.querySelector('.lets-cook');
+var addARecipeButton = document.querySelector('.add-a-recipe');
+var recipeType = document.querySelector('#recipe-type');
+var recipeName = document.querySelector('#recipe-name');
+var addNewRecipeButton = document.querySelector('.add-new');
 
 //event listeners
-letsCookButton.addEventListener('click', showRandomizedDish)
+letsCookButton.addEventListener('click', showRandomizedDish);
+addARecipeButton.addEventListener('click', showAddNewForm);
+addNewRecipeButton.addEventListener('click', getUserRecipeInfo);
 
 //functions and event handlers
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+};
+
+function getUserRecipeInfo() {
+  var userRecipeType = recipeType.value;
+  var userRecipeName = recipeName.value;
+  addUserRecipeInfoToArray(userRecipeType, userRecipeName);
+  displayUserRecipeInfo(userRecipeName);
+};
+
+function addUserRecipeInfoToArray(userRecipeType, userRecipeName) {
+  if (userRecipeType === 'Side') {
+    sideDishes.push(userRecipeName);
+  } else if (userRecipeType === 'Main Dish') {
+    mainDishes.push(userRecipeName);
+  } else if (userRecipeType === 'Dessert') {
+    dessertDishes.push(userRecipeName);
+  } else {
+    alert("Error: Cannot save to recipe list unless recipe type is Side, Main Dish, or Dessert.")
+  }
 };
 
 function showRandomizedDish(event) {
@@ -41,4 +67,16 @@ function showRandomizedDish(event) {
   } else if (entireSelection.checked) {
     dishSuggestionText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sideDishes[getRandomIndex(sideDishes)]} and ${dessertDishes[getRandomIndex(dessertDishes)]} for dessert!`
   }
+};
+
+function showAddNewForm(event) {
+  addNewRecipeForm.classList.remove("hidden");
+  event.preventDefault();
+};
+
+function displayUserRecipeInfo(userRecipeName) {
+  stockPot.classList.add("hidden");
+  dishSuggestion.classList.remove("hidden");
+  dishSuggestionText.innerText = userRecipeName;
+  event.preventDefault();
 };

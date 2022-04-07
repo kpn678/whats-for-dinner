@@ -51,7 +51,7 @@ main {
 }
 
 h2 span {
-  color: red;
+  color: #ee5253;
 }
 
 input[type="radio"] {
@@ -88,6 +88,19 @@ h3 {
 p {
   font-size: x-large;
   text-align: center;
+}
+
+footer {
+  background-color: rgba(225, 225, 225, .9);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.type-and-name-blanks {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .hidden {
