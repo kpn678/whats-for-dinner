@@ -45,9 +45,13 @@ main {
 
 .buttons-form {
   background-color: rgba(225, 225, 225, .9);
-  padding: 50px;
-  width: 350px;
   height: 300px;
+  width: 350px;
+  padding: 50px;
+}
+
+h2 span {
+  color: red;
 }
 
 input[type="radio"] {
@@ -56,20 +60,20 @@ input[type="radio"] {
 
 .lets-cook {
   background-color: #0fb9b1;
-  border-style: hidden;
-  border-radius: 5px;
   height: 30px;
   width: 150px;
+  border-radius: 5px;
+  border-style: hidden;
 }
 
 .stockpot-box {
+  background-color: rgba(225, 225, 225, .9);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(225, 225, 225, .9);
-  padding: 50px;
-  width: 350px;
   height: 300px;
+  width: 350px;
+  padding: 50px;
 }
 
 .stockpot-img {
@@ -82,9 +86,10 @@ h3 {
 }
 
 p {
-  font-size: xx-large;
+  font-size: x-large;
   text-align: center;
 }
+
 .hidden {
   display: none!important;
 }

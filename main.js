@@ -1,6 +1,6 @@
 //arrays
 var sideDishes = ["Miso Glazed Carrots", "Coleslaw", "Garden Salad", "Crispy Potatoes", "Sweet Potato Tots",
-"Coconut Rice", "Caeser Salad", "Shrimp Summer Rolls", "Garlic Butter Mushrooms", "Hush Puppies"];
+"Coconut Rice", "Caesar Salad", "Shrimp Summer Rolls", "Garlic Butter Mushrooms", "Hush Puppies"];
 var mainDishes = ["Spaghetti and Meatballs", "Pineapple Chicken", "Shakshuka", "Thai Yellow Curry",
 "Bibimbap", "Chicken Parmesean", "Butternut Squash Soup", "BBQ Chicken Burgers", "Ramen", "Empanadas",
 "Chicken Fried Rice", "Sheet Pan Fajitas", "Margarita Pizza"];
@@ -17,6 +17,7 @@ var dishSuggestionText = document.querySelector("p");
 var sideSelection = document.querySelector('input[value="side"]');
 var mainSelection = document.querySelector('input[value="main"]');
 var dessertSelection = document.querySelector('input[value="dessert"]');
+var entireSelection = document.querySelector('input[value="entire"]');
 var letsCookButton = document.querySelector(".lets-cook");
 
 //event listeners
@@ -27,7 +28,7 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function showRandomizedDish() {
+function showRandomizedDish(event) {
   stockPot.classList.add("hidden");
   dishSuggestion.classList.remove("hidden");
   event.preventDefault();
@@ -37,5 +38,7 @@ function showRandomizedDish() {
     dishSuggestionText.innerText = mainDishes[getRandomIndex(mainDishes)]
   } else if (dessertSelection.checked) {
     dishSuggestionText.innerText = dessertDishes[getRandomIndex(dessertDishes)]
+  } else if (entireSelection.checked) {
+    dishSuggestionText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sideDishes[getRandomIndex(sideDishes)]} and ${dessertDishes[getRandomIndex(dessertDishes)]} for dessert!`
   }
 };
