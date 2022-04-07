@@ -38,11 +38,19 @@ function getRandomIndex(array) {
 function getUserRecipeInfo() {
   var userRecipeType = recipeType.value;
   var userRecipeName = recipeName.value;
-  // addUserRecipeInfoToArray(userRecipeName);
+  addUserRecipeInfoToArray(userRecipeType, userRecipeName);
   displayUserRecipeInfo(userRecipeName);
-}
+};
 
-//addUserRecipeInfoToArray(userRecipeName);
+function addUserRecipeInfoToArray(userRecipeType, userRecipeName) {
+  if (userRecipeType === 'Side') {
+    sideDishes.push(userRecipeName);
+  } else if (userRecipeType === 'Main Dish') {
+    mainDishes.push(userRecipeName);
+  } else if (userRecipeType === 'Dessert') {
+    dessertDishes.push(userRecipeName);
+  }
+};
 
 function showRandomizedDish(event) {
   stockPot.classList.add("hidden");
@@ -70,4 +78,4 @@ function displayUserRecipeInfo(userRecipeName) {
   dishSuggestion.classList.remove("hidden");
   dishSuggestionText.innerText = userRecipeName;
   event.preventDefault();
-}
+};
