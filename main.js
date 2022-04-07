@@ -49,6 +49,8 @@ function addUserRecipeInfoToArray(userRecipeType, userRecipeName) {
     mainDishes.push(userRecipeName);
   } else if (userRecipeType === 'Dessert') {
     dessertDishes.push(userRecipeName);
+  } else {
+    alert("Error: Cannot save to recipe list unless recipe type is Side, Main Dish, or Dessert.")
   }
 };
 
@@ -66,7 +68,6 @@ function showRandomizedDish(event) {
     dishSuggestionText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sideDishes[getRandomIndex(sideDishes)]} and ${dessertDishes[getRandomIndex(dessertDishes)]} for dessert!`
   }
 };
-//probably split top part(display) from second part(data model?)
 
 function showAddNewForm(event) {
   addNewRecipeForm.classList.remove("hidden");
