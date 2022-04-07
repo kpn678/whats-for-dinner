@@ -26,9 +26,9 @@ var recipeName = document.querySelector('#recipe-name');
 var addNewRecipeButton = document.querySelector('.add-new');
 
 //event listeners
-letsCookButton.addEventListener('click', showRandomizedDish)
-addARecipeButton.addEventListener('click', showAddNewForm)
-addNewRecipeButton.addEventListener('click, getUserRecipeInfo)
+letsCookButton.addEventListener('click', showRandomizedDish);
+addARecipeButton.addEventListener('click', showAddNewForm);
+addNewRecipeButton.addEventListener('click', getUserRecipeInfo);
 
 //functions and event handlers
 function getRandomIndex(array) {
@@ -36,10 +36,13 @@ function getRandomIndex(array) {
 };
 
 function getUserRecipeInfo() {
-  var userRecipeType = recipeType.value
-  var userRecipeName = recipeName.value
-  displayUserCardInfo(userRecipeType, userRecipeName)
+  var userRecipeType = recipeType.value;
+  var userRecipeName = recipeName.value;
+  // addUserRecipeInfoToArray(userRecipeName);
+  displayUserRecipeInfo(userRecipeName);
 }
+
+//addUserRecipeInfoToArray(userRecipeName);
 
 function showRandomizedDish(event) {
   stockPot.classList.add("hidden");
@@ -61,3 +64,10 @@ function showAddNewForm(event) {
   addNewRecipeForm.classList.remove("hidden");
   event.preventDefault();
 };
+
+function displayUserRecipeInfo(userRecipeName) {
+  stockPot.classList.add("hidden");
+  dishSuggestion.classList.remove("hidden");
+  dishSuggestionText.innerText = userRecipeName;
+  event.preventDefault();
+}
