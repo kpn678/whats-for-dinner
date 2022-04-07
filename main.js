@@ -12,16 +12,21 @@ var dessertDishes = ["Apple Pie", "Lemon Meringue Pie", "Black Forest Cake", "Ba
 var stockPot = document.querySelector(".stockpot-img");
 var dishSuggestion = document.querySelector(".dish-suggestion")
 var dishSuggestionText = document.querySelector("p");
+var addNewRecipeForm = document.querySelector(".add-new-recipes");
 
 //query selectors
 var sideSelection = document.querySelector('input[value="side"]');
 var mainSelection = document.querySelector('input[value="main"]');
 var dessertSelection = document.querySelector('input[value="dessert"]');
 var entireSelection = document.querySelector('input[value="entire"]');
-var letsCookButton = document.querySelector(".lets-cook");
+var letsCookButton = document.querySelector('.lets-cook');
+var addARecipeButton = document.querySelector('.add-a-recipe');
+var addNewRecipeButton = document.querySelector('.add-new');
 
 //event listeners
 letsCookButton.addEventListener('click', showRandomizedDish)
+addARecipeButton.addEventListener('click', showAddNewForm)
+addNewRecipeButton.addEventListener('click, ')
 
 //functions and event handlers
 function getRandomIndex(array) {
@@ -41,4 +46,9 @@ function showRandomizedDish(event) {
   } else if (entireSelection.checked) {
     dishSuggestionText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sideDishes[getRandomIndex(sideDishes)]} and ${dessertDishes[getRandomIndex(dessertDishes)]} for dessert!`
   }
+};
+
+function showAddNewForm(event) {
+  addNewRecipeForm.classList.remove("hidden");
+  event.preventDefault();
 };
