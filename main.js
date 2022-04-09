@@ -45,10 +45,13 @@ function getUserRecipeInfo() {
 function addUserRecipeInfoToArray(userRecipeType, userRecipeName) {
   if (userRecipeType === 'Side') {
     sideDishes.push(userRecipeName);
+    alert("Your recipe has been added to the Side list!");
   } else if (userRecipeType === 'Main Dish') {
     mainDishes.push(userRecipeName);
+    alert("Your recipe has been added to the Main Dish list!");
   } else if (userRecipeType === 'Dessert') {
     dessertDishes.push(userRecipeName);
+    alert("Your recipe has been added to the Dessert list!");
   } else {
     alert("Error: Recipe will appear in suggestion initially, but it cannot be saved to recipe list unless recipe type is Side, Main Dish, or Dessert.")
   }
