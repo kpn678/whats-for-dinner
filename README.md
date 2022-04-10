@@ -41,7 +41,7 @@ Please check out the published page [here](https://kpn678.github.io/whats-for-di
 
 ## Reflections
 
-I enjoyed this project! It gave us a chance to take what we've been learning in class and then apply our individualized skillset and visions to it. It was a little hard going from the pair project where you had someone to rely on to catch errors or suggest different ways of doing thing to having to be responsible for all those things on your own. Still, this was a great growing experience. I was very proud to have my app mostly match the comp and be functional. While I did not have time to attempt it, I am definitely interested in CSS and would have enjoyed delving deeper into the "Intermediate CSS" *Choose Your Own Adventure*.
+I enjoyed this project! It gave us a chance to take what we've been learning in class and then apply our individualized skillset and visions to it. It was a little hard going from the pair project, where you had someone to rely on to catch errors or suggest different ways of doing things, to having to be responsible for all those things on your own. Still, this was a great growing experience. I was very proud to have my app mostly match the comp and be functional. While I did not have time to attempt it, I am definitely interested in CSS and would have enjoyed delving deeper into the "Intermediate CSS" *Choose Your Own Adventure*.
 
 ## Technologies Implemented
 
